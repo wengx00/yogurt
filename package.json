@@ -1,0 +1,30 @@
+{
+  "name": "yogurt-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install",
+    "update:lockfile": "pnpm install --lockfile-only"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,mjs,cjs,vue}": [
+      "node --max_old_space_size=8192 ./node_modules/eslint/bin/eslint.js --fix-dry-run --color --cache --quiet"
+    ]
+  },
+  "keywords": [],
+  "packageManager": "pnpm@8.15.0",
+  "author": "ccweng",
+  "license": "MIT",
+  "devDependencies": {
+    "@cc-infra/eslint-config": "^0.0.5",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@types/node": "^20.12.12",
+    "@yogurt-ui/common-styles": "workspace:^",
+    "commitlint": "^19.4.0",
+    "eslint": "8.56.0",
+    "husky": "^9.0.11",
+    "lerna": "^8.1.6"
+  }
+}

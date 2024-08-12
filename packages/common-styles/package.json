@@ -1,0 +1,12 @@
+{
+  "name": "@yogurt-ui/common-styles",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "dopublish": "pnpm publish --registry=https://registry.npmjs.org --no-git-checks --access public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {}
+}
