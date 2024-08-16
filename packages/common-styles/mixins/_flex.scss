@@ -4,3 +4,10 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin inline-flex($direction: row, $justify: flex-start, $align: flex-start) {
+  display: inline-flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

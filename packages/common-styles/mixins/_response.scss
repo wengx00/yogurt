@@ -1,0 +1,16 @@
+@mixin response($breakpoints) {
+  @if type-of($breakpoints) == list and length($breakpoints) == 2 {
+    $min: nth($breakpoints, 1);
+    $max: nth($breakpoints, 2);
+
+    @media screen and (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if type-of($breakpoints) == list {
+    @media screen and (min-width: $breakpoints) {
+      @content;
+    }
+  } @else {
+    @warn "`$breakpoints` is invalid.";
+  }
+}

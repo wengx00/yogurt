@@ -1,0 +1,28 @@
+@import '../base.scss';
+
+$scope: #{$prefix}_button;
+
+.#{$scope} {
+  @include reset();
+  @include inline-flex(row, center, center);
+  @include padding($padding-xs $padding-m);
+  @include text-ellipsis();
+  position: relative;
+  flex-shrink: 0;
+  gap: $gap-s;
+  border-radius: $radius-medium;
+  border: $border-width $border-color solid;
+  background-color: $bg-color-container;
+  transition:
+    border-color $anim-duration-moderate,
+    background-color $anim-duration-moderate;
+
+  &__text {
+    color: $text-color-default;
+  }
+
+  &:hover {
+    border-color: $border-color-hover;
+    background-color: $bg-color-container-hover;
+  }
+}

@@ -5,6 +5,11 @@
   "scripts": {
     "dopublish": "pnpm publish --registry=https://registry.npmjs.org --no-git-checks --access public"
   },
+  "sideEffects": [
+    "*.css",
+    "*.less",
+    "*.scss"
+  ],
   "keywords": [],
   "author": "",
   "license": "MIT",

@@ -5,32 +5,42 @@ module.exports = {
   extends: [
     '@cc-infra/eslint-config',
     'plugin:react/recommended',
-    'plugin:react-hooks/recommended'
+    'plugin:react-hooks/recommended',
   ],
   parserOptions: {
     tsconfigRootDir: __dirname,
-    project: ['./tsconfig.app.json'],
+    project: ['./tsconfig.json'],
     ecmaVersion: 2020,
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   plugins: ['react', 'react-hooks'],
   overrides: [
     {
-      files: ['*.js', '*.cjs', 'vite.config.ts'],
-      extends: ['plugin:@typescript-eslint/disable-type-checked']
-    }
+      files: ['*.js', '*.cjs', 'rollup.config.js'],
+      extends: ['plugin:@typescript-eslint/disable-type-checked'],
+    },
   ],
   rules: {
     'no-console': 'off',
     'max-classes-per-file': 'off',
     'no-continue': 'off',
     'no-multi-assign': 'off',
+    'import/no-absolute-path': 'off',
     '@typescript-eslint/no-loop-func': 'off',
     '@typescript-eslint/require-await': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/button-has-type': 'off',
-    'import/no-absolute-path': 'off'
-  }
+    'react/jsx-props-no-spreading': 'off',
+    'react/require-default-props': 'off',
+  },
+  ignorePatterns: [
+    'dist',
+    'node_modules',
+    '_es',
+    '_lib',
+    '_esm',
+    '**/style/*.js',
+  ],
 };

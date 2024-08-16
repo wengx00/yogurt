@@ -1,0 +1,131 @@
+$prefix: yogurt;
+
+// 颜色
+$primary-color: var(--yg-primary-color);
+$primary-color-light: var(--yg-primary-color-light);
+$primary-color-light-hover: var(--yg-primary-color-light-hover);
+$primary-color-light-active: var(--yg-primary-color-light-active);
+$primary-color-light-disabled: var(--yg-primary-color-light-disabled);
+$primary-color-focus: var(--yg-primary-color-focus);
+
+$warning-color: var(--yg-warning-color);
+$warning-color-light: var(--yg-warning-color-light);
+$warning-color-light-hover: var(--yg-warning-color-light-hover);
+$warning-color-light-active: var(--yg-warning-color-light-active);
+$warning-color-light-disabled: var(--yg-warning-color-light-disabled);
+$warning-color-focus: var(--yg-warning-color-focus);
+
+$success-color: var(--yg-success-color);
+$success-color-light: var(--yg-success-color-light);
+$success-color-light-hover: var(--yg-success-color-light-hover);
+$success-color-light-active: var(--yg-success-color-light-active);
+$success-color-light-disabled: var(--yg-success-color-light-disabled);
+$success-color-focus: var(--yg-success-color-focus);
+
+$error-color: var(--yg-error-color);
+$error-color-light: var(--yg-error-color-light);
+$error-color-light-hover: var(--yg-error-color-light-hover);
+$error-color-light-active: var(--yg-error-color-light-active);
+$error-color-light-disabled: var(--yg-error-color-light-disabled);
+$error-color-focus: var(--yg-error-color-focus);
+
+$bg-color-container: var(--yg-bg-color-container);
+$bg-color-container-select: var(--yg-bg-color-container-select);
+$bg-color-container-hover: var(--yg-bg-color-container-hover);
+$bg-color-container-active: var(--yg-bg-color-container-active);
+
+$bg-color-component: var(--yg-bg-color-component);
+$bg-color-component-hover: var(--yg-bg-color-component-hover);
+$bg-color-component-active: var(--yg-bg-color-component-active);
+$bg-color-component-disabled: var(--yg-bg-color-component-disabled);
+
+// 字体颜色
+
+$text-color-default: var(--yg-text-color-default);
+$text-color-secondary: var(--yg-text-color-secondary);
+$text-color-placeholder: var(--yg-text-color-placeholder);
+$text-color-disabled: var(--yg-text-color-disabled);
+$text-color-primary: var(--yg-text-color-primary);
+$text-color-anti: var(--yg-text-color-anti);
+$text-color-link: var(--yg-text-color-link);
+
+// border 颜色
+$border-color: var(--yg-border-level-1-color);
+$border-color-hover: var(--yg-border-level-2-color);
+
+// border-width
+$border-width: 1px;
+$border-width-bold: 2px;
+
+// border-radius
+$radius-small: var(--yg-radius-small);
+$radius-medium: var(--yg-radius-medium);
+$radius-large: var(--yg-radius-large);
+$radius-round: var(--yg-radius-round);
+$radius-circle: var(--yg-radius-circle);
+
+// 内边距
+$padding: 8px;
+$padding-xxs: var(--yg-padding-xxs);
+$padding-xs: var(--yg-padding-xs);
+$padding-s: var(--yg-padding-s);
+$padding-m: var(--yg-padding-m);
+$padding-l: var(--yg-padding-l);
+$padding-xl: var(--yg-padding-xl);
+$padding-xxl: var(--yg-padding-xxl);
+
+// 外边距
+$margin: 8px;
+$margin-xxs: var(--yg-margin-xxs);
+$margin-xs: var(--yg-margin-xs);
+$margin-s: var(--yg-margin-s);
+$margin-m: var(--yg-margin-m);
+$margin-l: var(--yg-margin-l);
+$margin-xl: var(--yg-margin-xl);
+$margin-xxl: var(--yg-margin-xxl);
+
+// 间距
+$gap: 8px;
+$gap-xs: $gap * 0.5; // 4px
+$gap-s: $gap; // 8px
+$gap-m: $gap * 1.5; // 12px
+$gap-l: $gap * 2; // 16px
+$gap-xl: $gap * 3; // 24px
+$gap-xxl: $gap * 4; // 32px
+
+// 字体
+$font-size: 10px;
+$font-size-s: var(--yg-font-size-body-small);
+$font-size-m: var(--yg-font-size-body-medium);
+$font-size-l: var(--yg-font-size-body-large);
+$font-size-xl: var(--yg-font-size-title-large);
+$font-size-xxl: var(--yg-font-size-headline-large);
+
+// 滚动条
+$scrollbar-color: var(--yg-scrollbar-color);
+$scrollbar-hover-color: var(--yg-scrollbar-hover-color);
+
+// 断点
+$screen-xs: 320px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+$screen-xl: 1400px;
+$screen-xxl: 1800px;
+
+// 动画
+$anim-fn-ease: cubic-bezier(0.38, 0, 0.24, 1);
+$anim-fn-ease-out: cubic-bezier(0, 0, 0.15, 1);
+$anim-fn-ease-in: cubic-bezier(0.82, 0, 1, 0.9);
+$anim-duration-quick: 0.25s;
+$anim-duration-moderate: 0.3s;
+$anim-duration-slow: 0.35s;
+
+// z-index
+$z-index-affix: 500;
+$z-index-drawer: 1000;
+$z-index-dialog: 1500;
+$z-index-loading: 2000;
+$z-index-popup: 2500;
+$z-index-notification: 3000;
+$z-index-message: 3500;

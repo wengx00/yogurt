@@ -1,0 +1,9 @@
+@mixin reset($color: inherit, $bgColor: transparent, $font: inherit) {
+  font: $font;
+  color: $color;
+  background-color: $bgColor;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
