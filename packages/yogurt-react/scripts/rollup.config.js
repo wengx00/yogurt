@@ -9,6 +9,7 @@ import json from '@rollup/plugin-json';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 import url from '@rollup/plugin-url';
+import { glob } from 'glob';
 import esbuild from 'rollup-plugin-esbuild';
 import ignoreImport from 'rollup-plugin-ignore-import';
 import multiInput from 'rollup-plugin-multi-input';
@@ -95,12 +96,14 @@ const getPlugins = ({ prod = false, cssCodeSplit = true } = {}) => {
   return basicPlugins;
 };
 
-const cssConfig = {
-  input: ['src/**/style/index.js'],
-  plugins: [multiInput(), styles({ mode: 'extract' })],
+const scssConfig = {
+  input: await glob(['src/**/style/index.js']),
+  plugins: [styles({ mode: 'extract' })],
   output: {
-    dir: '_es',
     banner,
+    dir: '_es/',
+    preserveModules: true,
+    preserveModuleRoot: 'src',
     sourcemap: false,
     assetFileNames: '[name].css',
   },
@@ -113,12 +116,12 @@ const esConfig = {
   treeshake: false,
   plugins: [multiInput(), getPlugins({ cssCodeSplit: true })],
   output: {
-    dir: '_es',
     banner,
+    dir: '_es/',
     format: 'esm',
     sourcemap: false,
     chunkFileNames: '_chunks/[name]-[hash].js',
   },
 };
 
-export default [cssConfig, esConfig];
+export default [scssConfig, esConfig];

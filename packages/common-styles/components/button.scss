@@ -10,19 +10,36 @@ $scope: #{$prefix}_button;
   position: relative;
   flex-shrink: 0;
   gap: $gap-s;
-  border-radius: $radius-medium;
   border: $border-width $border-color solid;
   background-color: $bg-color-container;
+  color: $text-color-default;
   transition:
     border-color $anim-duration-moderate,
     background-color $anim-duration-moderate;
 
-  &__text {
-    color: $text-color-default;
-  }
-
   &:hover {
     border-color: $border-color-hover;
     background-color: $bg-color-container-hover;
+  }
+
+  &_outlined {
+    --ripple-color: #{$primary-color-light};
+    border-color: $primary-color-light;
+    color: $text-color-primary;
+
+    &:hover {
+      background-color: $primary-color-extra-light;
+      border-color: $primary-color-light-hover;
+    }
+  }
+
+  &_circle {
+    border-radius: $radius-circle;
+  }
+  &_round {
+    border-radius: $radius-round;
+  }
+  &_rectangle {
+    border-radius: $radius-medium;
   }
 }

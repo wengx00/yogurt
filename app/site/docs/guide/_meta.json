@@ -1,0 +1,12 @@
+[
+  {
+    "type": "section-header",
+    "label": "开始"
+  },
+  "index",
+  {
+    "type": "section-header",
+    "label": "基础"
+  },
+  "button"
+]

@@ -10,8 +10,11 @@
     "*.less",
     "*.scss"
   ],
+  "files": [
+    "."
+  ],
   "keywords": [],
-  "author": "",
+  "author": "ccweng",
   "license": "MIT",
   "devDependencies": {}
 }

@@ -1,7 +1,8 @@
 :root {
   /* 颜色 */
   --primary-color: var(--yg-primary-color-6);
-  --yg-primary-color-light: var(--yg-primary-color-1);
+  --yg-primary-color-light: var(--yg-primary-color-3);
+  --yg-primary-color-extra-light: var(--yg-primary-color-1);
   --yg-primary-color-focus: var(--yg-primary-color-2);
   --yg-primary-color-disabled: var(--yg-primary-color-3);
   --yg-primary-color-hover: var(--yg-primary-color-5);
@@ -101,7 +102,8 @@
   --yg-font-gray-2: rgba(0, 0, 0, 0.6);
   --yg-font-gray-3: rgba(0, 0, 0, 0.4);
   --yg-font-gray-4: rgba(0, 0, 0, 0.26);
-  --yg-primary-color-light-hover: var(--yg-primary-color-2);
+  --yg-primary-color-light-hover: var(--yg-primary-color-4);
+  --yg-primary-color-extra-light-hover: var(--yg-primary-color-2);
   --yg-warning-color-light-hover: var(--yg-warning-color-2);
   --yg-error-color-light-hover: var(--yg-error-color-2);
   --yg-success-color-light-hover: var(--yg-success-color-2);
@@ -128,7 +130,6 @@
   --yg-text-color-anti: #fff;
   --yg-text-color-primary: var(--primary-color);
   --yg-text-color-link: var(--primary-color);
-
 
   /* 尺寸 */
   --yg-size-1: 2px;
@@ -185,16 +186,23 @@
   --yg-radius-round: 999px;
   --yg-radius-circle: 100%;
 
-
   /* 行高 */
   --yg-line-height-base: 8px;
   --yg-line-height-body-small: calc(var(--yg-line-height-base) + var(--yg-font-size-body-small));
   --yg-line-height-body-medium: calc(var(--yg-line-height-base) + var(--yg-font-size-body-medium));
   --yg-line-height-body-large: calc(var(--yg-line-height-base) + var(--yg-font-size-body-large));
   --yg-line-height-title-small: calc(var(--yg-line-height-base) + var(--yg-font-size-title-small));
-  --yg-line-height-title-medium: calc(var(--yg-line-height-base) + var(--yg-font-size-title-medium));
+  --yg-line-height-title-medium: calc(
+    var(--yg-line-height-base) + var(--yg-font-size-title-medium)
+  );
   --yg-line-height-title-large: calc(var(--yg-line-height-base) + var(--yg-font-size-title-large));
-  --yg-line-height-headline-small: calc(var(--yg-line-height-base) + var(--yg-font-size-headline-small));
-  --yg-line-height-headline-medium: calc(var(--yg-line-height-base) + var(--yg-font-size-headline-medium));
-  --yg-line-height-headline-large: calc(var(--yg-line-height-base) + var(--yg-font-size-headline-large));
+  --yg-line-height-headline-small: calc(
+    var(--yg-line-height-base) + var(--yg-font-size-headline-small)
+  );
+  --yg-line-height-headline-medium: calc(
+    var(--yg-line-height-base) + var(--yg-font-size-headline-medium)
+  );
+  --yg-line-height-headline-large: calc(
+    var(--yg-line-height-base) + var(--yg-font-size-headline-large)
+  );
 }

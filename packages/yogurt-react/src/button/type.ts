@@ -1,13 +1,12 @@
 import { BasePropsWithChildren, MouseEventHandler, YNode } from '../types/base';
-import { BaseSize } from '../types/enum';
-
-export type ButtonShape = 'round' | 'square' | 'circle';
+import { BaseShape, BaseSize, BaseVariant } from '../types/enum';
 
 export type ButtonProps = {
   prefix?: YNode;
   suffix?: YNode;
-  shape?: ButtonShape;
+  shape?: BaseShape;
   size?: BaseSize;
+  variant?: BaseVariant;
 
   onClick?: MouseEventHandler<HTMLButtonElement>;
 };

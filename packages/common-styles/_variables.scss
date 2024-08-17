@@ -2,10 +2,13 @@ $prefix: yogurt;
 
 // 颜色
 $primary-color: var(--yg-primary-color);
+$primary-color-hover: var(--yg-primary-color-hover);
 $primary-color-light: var(--yg-primary-color-light);
 $primary-color-light-hover: var(--yg-primary-color-light-hover);
 $primary-color-light-active: var(--yg-primary-color-light-active);
 $primary-color-light-disabled: var(--yg-primary-color-light-disabled);
+$primary-color-extra-light: var(--yg-primary-color-extra-light);
+$primary-color-extra-light-hover: var(--yg-primary-color-extra-light-hover);
 $primary-color-focus: var(--yg-primary-color-focus);
 
 $warning-color: var(--yg-warning-color);
