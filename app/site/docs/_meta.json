@@ -3,5 +3,10 @@
     "text": "文档",
     "link": "/guide/",
     "activeMatch": "/guide/"
+  },
+  {
+    "text": "API",
+    "link": "/api/",
+    "activeMatch": "/api/"
   }
 ]

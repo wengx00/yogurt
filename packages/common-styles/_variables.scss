@@ -12,6 +12,7 @@ $primary-color-extra-light-hover: var(--yg-primary-color-extra-light-hover);
 $primary-color-focus: var(--yg-primary-color-focus);
 
 $warning-color: var(--yg-warning-color);
+$warning-color-hover: var(--yg-warning-color-hover);
 $warning-color-light: var(--yg-warning-color-light);
 $warning-color-light-hover: var(--yg-warning-color-light-hover);
 $warning-color-light-active: var(--yg-warning-color-light-active);
@@ -19,6 +20,7 @@ $warning-color-light-disabled: var(--yg-warning-color-light-disabled);
 $warning-color-focus: var(--yg-warning-color-focus);
 
 $success-color: var(--yg-success-color);
+$success-color-hover: var(--yg-success-color-hover);
 $success-color-light: var(--yg-success-color-light);
 $success-color-light-hover: var(--yg-success-color-light-hover);
 $success-color-light-active: var(--yg-success-color-light-active);
@@ -26,6 +28,7 @@ $success-color-light-disabled: var(--yg-success-color-light-disabled);
 $success-color-focus: var(--yg-success-color-focus);
 
 $error-color: var(--yg-error-color);
+$error-color-hover: var(--yg-error-color-hover);
 $error-color-light: var(--yg-error-color-light);
 $error-color-light-hover: var(--yg-error-color-light-hover);
 $error-color-light-active: var(--yg-error-color-light-active);
@@ -41,6 +44,11 @@ $bg-color-component: var(--yg-bg-color-component);
 $bg-color-component-hover: var(--yg-bg-color-component-hover);
 $bg-color-component-active: var(--yg-bg-color-component-active);
 $bg-color-component-disabled: var(--yg-bg-color-component-disabled);
+
+$bg-color-contained: var(--yg-bg-color-contained);
+$bg-color-contained-hover: var(--yg-bg-color-contained-hover);
+$bg-color-contained-active: var(--yg-bg-color-contained-active);
+$bg-color-contained-disabled: var(--yg-bg-color-contained-disabled);
 
 // 字体颜色
 
@@ -103,6 +111,14 @@ $font-size-m: var(--yg-font-size-body-medium);
 $font-size-l: var(--yg-font-size-body-large);
 $font-size-xl: var(--yg-font-size-title-large);
 $font-size-xxl: var(--yg-font-size-headline-large);
+
+// 行高
+$line-height: var(--yg-line-height-base);
+$line-height-s: var(--yg-line-height-body-small);
+$line-height-m: var(--yg-line-height-body-medium);
+$line-height-l: var(--yg-line-height-body-large);
+$line-height-xl: var(--yg-line-height-title-large);
+$line-height-xxl: var(--yg-line-height-headline-large);
 
 // 滚动条
 $scrollbar-color: var(--yg-scrollbar-color);

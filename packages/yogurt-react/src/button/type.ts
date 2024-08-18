@@ -1,14 +1,20 @@
+import React from 'react';
+
 import { BasePropsWithChildren, MouseEventHandler, YNode } from '../types/base';
-import { BaseShape, BaseSize, BaseVariant } from '../types/enum';
+import { BaseShape, BaseSize, BaseTheme, BaseVariant } from '../types/enum';
 
 export type ButtonProps = {
-  prefix?: YNode;
-  suffix?: YNode;
+  prefixSlot?: YNode;
+  suffixSlot?: YNode;
   shape?: BaseShape;
   size?: BaseSize;
   variant?: BaseVariant;
+  theme?: BaseTheme;
 
   onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
-export interface YButtonProps extends BasePropsWithChildren<ButtonProps> {}
+export type YButtonProps = BasePropsWithChildren<
+  ButtonProps,
+  React.ButtonHTMLAttributes<HTMLButtonElement>
+>;

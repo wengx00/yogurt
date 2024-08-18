@@ -3,43 +3,143 @@
 $scope: #{$prefix}_button;
 
 .#{$scope} {
+  --bg-color: #{$bg-color-container};
+  --bg-color-hover: #{$bg-color-container-hover};
+  --border-color: #{$border-color};
+  --border-color-hover: #{$border-color-hover};
+  --boder-width: #{$border-width};
+  --text-color: #{$text-color-default};
+  --ripple-color: #{$bg-color-component};
+  --theme-color: #{$bg-color-contained};
+  --theme-color-hover: #{$bg-color-contained-hover};
   @include reset();
   @include inline-flex(row, center, center);
-  @include padding($padding-xs $padding-m);
-  @include text-ellipsis();
+  overflow: hidden;
   position: relative;
   flex-shrink: 0;
+  height: fit-content;
   gap: $gap-s;
-  border: $border-width $border-color solid;
-  background-color: $bg-color-container;
-  color: $text-color-default;
+  border-width: var(--boder-width);
+  border-color: var(--border-color);
+  border-style: solid;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   transition:
     border-color $anim-duration-moderate,
     background-color $anim-duration-moderate;
 
-  &:hover {
-    border-color: $border-color-hover;
-    background-color: $bg-color-container-hover;
+  &__text {
+    @include text-ellipsis();
+    flex-shrink: 0;
+    user-select: none;
   }
 
-  &_outlined {
-    --ripple-color: #{$primary-color-light};
-    border-color: $primary-color-light;
-    color: $text-color-primary;
-
+  @include hover() {
+    cursor: pointer;
     &:hover {
-      background-color: $primary-color-extra-light;
-      border-color: $primary-color-light-hover;
+      border-color: var(--border-color-hover);
+      background-color: var(--bg-color-hover);
     }
   }
 
-  &_circle {
-    border-radius: $radius-circle;
+  &_theme {
+    &_primary {
+      --theme-color: #{$primary-color};
+      --theme-color-hover: #{$primary-color-hover};
+      --ripple-color: #{$primary-color-extra-light-hover};
+      --border-color: #{$primary-color-light};
+      --text-color: #{$text-color-primary};
+      --bg-color-hover: #{$primary-color-extra-light};
+      --border-color-hover: #{$primary-color-light-hover};
+    }
+    &_success {
+      --theme-color: #{$success-color};
+      --theme-color-hover: #{$success-color-hover};
+      --ripple-color: #{$success-color-light-hover};
+      --border-color: #{$success-color-focus};
+      --text-color: #{$success-color};
+      --bg-color-hover: #{$success-color-light};
+      --border-color-hover: #{$success-color};
+    }
+    &_warning {
+      --theme-color: #{$warning-color};
+      --theme-color-hover: #{$warning-color-hover};
+      --ripple-color: #{$warning-color-light-hover};
+      --border-color: #{$warning-color-focus};
+      --text-color: #{$warning-color};
+      --bg-color-hover: #{$warning-color-light};
+      --border-color-hover: #{$warning-color};
+    }
+    &_error {
+      --theme-color: #{$error-color};
+      --theme-color-hover: #{$error-color-hover};
+      --ripple-color: #{$error-color-light-hover};
+      --border-color: #{$error-color-focus};
+      --text-color: #{$error-color};
+      --bg-color-hover: #{$error-color-light};
+      --border-color-hover: #{$error-color};
+    }
   }
-  &_round {
-    border-radius: $radius-round;
+
+  &_size {
+    &_small {
+      @include padding($padding-xxs $padding-xs);
+      font-size: $font-size-s;
+      line-height: $line-height-s;
+
+      &:is(.#{$scope}_shape_circle) {
+        @include padding($padding-xs);
+      }
+    }
+    &_medium {
+      @include padding($padding-xs $padding-m);
+      font-size: $font-size-m;
+      line-height: $line-height-m;
+
+      &:is(.#{$scope}_shape_circle) {
+        @include padding($padding-s);
+      }
+    }
+    &_large {
+      @include padding($padding-xs $padding-l);
+      font-size: $font-size-l;
+      line-height: $line-height-xl;
+
+      &:is(.#{$scope}_shape_circle) {
+        @include padding($padding-m);
+      }
+    }
   }
-  &_rectangle {
-    border-radius: $radius-medium;
+
+  &_variant {
+    &_text {
+      border-color: transparent;
+      --border-color-hover: transparent;
+    }
+
+    &_contained {
+      --text-color: #{$text-color-anti};
+      --ripple-color: rgba(255, 255, 255, 0.3);
+      border-width: 0;
+      background-color: var(--theme-color);
+
+      @include hover() {
+        &:hover {
+          background-color: var(--theme-color-hover);
+        }
+      }
+    }
+  }
+
+  &_shape {
+    &_circle {
+      border-radius: $radius-circle;
+    }
+    &_round {
+      border-radius: $radius-round;
+    }
+    &_rectangle {
+      border-radius: $radius-medium;
+    }
   }
 }

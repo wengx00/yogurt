@@ -14,8 +14,18 @@ function ButtonRenderer(
   props: YButtonProps,
   ref: React.RefObject<HTMLButtonElement>,
 ) {
-  const { className, style, children, prefix, suffix, variant, shape } =
-    useDefaultProps(defaultProps, props);
+  const {
+    className,
+    style,
+    children,
+    prefixSlot,
+    suffixSlot,
+    variant,
+    shape,
+    theme,
+    size,
+    ...rest
+  } = useDefaultProps(defaultProps, props);
   const { classPrefix } = useConfig();
 
   const [domRef, setDomRef] = useDomRefCallback();
@@ -24,22 +34,29 @@ function ButtonRenderer(
 
   return (
     <button
+      {...rest}
       ref={ref || setDomRef}
       style={style}
       className={classNames(className, [
         `${classPrefix}_button`,
-        `${classPrefix}_button_${variant}`,
-        `${classPrefix}_button_${shape}`,
+        `${classPrefix}_button_variant_${variant}`,
+        `${classPrefix}_button_shape_${shape}`,
+        `${classPrefix}_button_theme_${theme}`,
+        `${classPrefix}_button_size_${size}`,
       ])}
     >
-      {prefix}
-      <span className={`${classPrefix}_button__text`}>{children}</span>
-      {suffix}
+      {prefixSlot}
+      {children && (
+        <span className={`${classPrefix}_button__text`}>{children}</span>
+      )}
+      {suffixSlot}
     </button>
   );
 }
 
-const Button = forwardRef(ButtonRenderer as any);
+const Button = forwardRef<HTMLButtonElement, YButtonProps>(
+  ButtonRenderer as any,
+);
 
 Button.displayName = 'Button';
 

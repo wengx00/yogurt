@@ -4,10 +4,11 @@ const defaultProps: YButtonProps = {
   size: 'medium',
   variant: 'outlined',
   shape: 'rectangle',
+  theme: 'default',
   style: {},
   className: '',
-  prefix: null,
-  suffix: null,
+  prefixSlot: null,
+  suffixSlot: null,
   children: null,
 };
 

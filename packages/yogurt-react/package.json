@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development rollup --config scripts/rollup.config.js --watch",
     "build": "cross-env NODE_ENV=production rollup --config scripts/rollup.config.js && pnpm build:tsc",
-    "build:tsc": "tsc --emitDeclarationOnly -d -p ./tsconfig.build.json --outDir _es/",
+    "build:tsc": "tsc --emitDeclarationOnly -d -p ./tsconfig.build.json --outDir _es",
     "lint": "eslint .",
     "g": "lerna run build --scope @yogurt-ui/common-utils && node ./scripts/createComponent.js"
   },
@@ -19,13 +19,13 @@
   ],
   "main": "_es/index.js",
   "module": "_es/index.js",
-  "types": "./dist/types/index.d.ts",
+  "types": "./_es/index.d.ts",
   "license": "MIT",
   "exports": {
     "default": "./_es/index.js",
     "import": "./_es/index.js",
     "require": "./_es/index.js",
-    "types": "./dist/types/index.d.ts"
+    "types": "./_es/index.d.ts"
   },
   "peerDependencies": {
     "react": "^18.3.1",

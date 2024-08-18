@@ -8,5 +8,7 @@
     "type": "section-header",
     "label": "基础"
   },
-  "button"
+  "button",
+  "stack",
+  "icon"
 ]

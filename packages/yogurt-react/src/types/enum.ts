@@ -8,3 +8,11 @@ export type BaseVariant<T = never> =
   | 'text'
   | 'default'
   | T;
+
+export type BaseTheme<T = never> =
+  | 'default'
+  | 'primary'
+  | 'warning'
+  | 'success'
+  | 'error'
+  | T;

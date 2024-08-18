@@ -1,0 +1,7 @@
+@import '../base.scss';
+
+$scope: #{$prefix}_stack;
+
+.#{$scope} {
+  @include flex();
+}

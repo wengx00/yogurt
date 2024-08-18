@@ -103,7 +103,7 @@ const scssConfig = {
     banner,
     dir: '_es/',
     preserveModules: true,
-    preserveModuleRoot: 'src',
+    preserveModulesRoot: 'src',
     sourcemap: false,
     assetFileNames: '[name].css',
   },

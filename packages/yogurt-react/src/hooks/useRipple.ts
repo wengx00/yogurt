@@ -19,7 +19,6 @@ const getRippleColor = (el: HTMLElement, customRippleColor?: string) => {
   // CSS Variable
   const cssVariable = getComputedStyle(el).getPropertyValue('--ripple-color');
   if (cssVariable) {
-    console.log(cssVariable);
     return cssVariable;
   }
   return defaultRippleColor;
@@ -61,10 +60,10 @@ export default function useRipple(
         setStyle(rippleContainer, {
           borderRadius,
           position: 'absolute',
-          top: `${0 - borderWidth}px`,
-          left: `${0 - borderWidth}px`,
-          width: `${elWidth}px`,
-          height: `${elHeight}px`,
+          top: `${-1 - borderWidth}px`,
+          left: `${-1 - borderWidth}px`,
+          width: `${elWidth + 2}px`,
+          height: `${elHeight + 2}px`,
           pointerEvents: 'none',
           overflow: 'hidden',
         });
