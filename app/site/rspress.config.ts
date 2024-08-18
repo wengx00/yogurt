@@ -7,6 +7,7 @@ export default defineConfig({
   root: path.join(__dirname, 'docs'),
   title: 'YogurtUI',
   description: '开箱即用的React组件库',
+  base: '/yogurt/',
   icon: '/rspress-icon.png',
   plugins: [
     // pluginPreview(),
